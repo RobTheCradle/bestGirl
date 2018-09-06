@@ -1,0 +1,11 @@
+/*全局样式*/
+*{
+    box-sizing: border-box;
+    font-family: "微软雅黑","Times New Roman",Georgia,Serif;
+    margin: 0px;
+    padding: 0px;
+}
+/*清空浮动*/
+.clear{
+    clear: both;
+}

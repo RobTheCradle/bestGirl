@@ -1,0 +1,91 @@
+/*心形按钮*/
+#heartBtn{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 9;
+}
+#heartBtn .left{
+    position: relative;
+    top:-40px;
+    left: 25px;
+    transform: rotate(-45deg);
+}
+
+#heartBtn .right{
+    position: relative;
+    top:-250px;
+    left: 25px;
+    transform: rotate(45deg);
+}
+
+#heartBtn .circle{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+#heartBtn .rect{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: brown;
+    top:-65px;
+}
+
+
+#heartBtn:hover .right .rect{
+    cursor:pointer;
+    box-shadow:0 0 16px brown;
+}
+
+#heartBtn:hover .circle{
+    cursor:pointer;
+    box-shadow:0px 0px 16px brown;
+}
+
+#heartBtn{
+    animation: heartAnimate 1.5s infinite;
+}
+
+/*心形动画*/
+@keyframes heartAnimate{
+    0%   { transform: scale(1);   }
+    5%  { transform: scale(1.5); }
+    70%  { transform: scale(1.1); }
+    75%  { transform: scale(1.2); }
+    100% { transform: scale(1);   }
+}
+
+
+/*线条*/
+
+#heartLine{
+    position: relative;
+    height: 150px;
+}
+
+#heartLine .heartLineCover{
+    height: 150px;
+    overflow: hidden;
+    animation: heartLineCoverAnimate 3s infinite;
+    position: relative;
+    z-index: 2;
+}
+
+#heartLine .heartLineGrayCover {
+    height: 150px;
+    position: relative;
+    top: -150px;
+    left: 0;
+}
+
+
+
+/*线条遮盖动画*/
+@keyframes heartLineCoverAnimate {
+    0%   { width: 0%;   }
+    90% { width: 100%;  }
+    100% { width: 0%;   }
+}
