@@ -5,6 +5,8 @@ $(function () {
     resizeWindow("container");
     /*自适应位置和高宽*/
     heartLinePosition("heartLine");
+    //自适应遮盖层
+    resizeWindow("cover")
 })
 
 window.onresize=function(){
@@ -32,4 +34,14 @@ function heartLinePosition(ele){
         = document.getElementById("heartLineImage").style.width
         = document.getElementById("heartLineImageGray").style.width
         = window.innerWidth+"px";
+}
+
+$("#heartBtn").on('click',function(){
+   clickHeart();
+});
+
+/*点击心形按钮*/
+function clickHeart(){
+    $(".top").hide()
+    $(".bottom").hide()
 }
